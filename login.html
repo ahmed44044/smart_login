@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="logIn">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div>
+                        <img src="Login Images/login-image.jpg" class="w-100 h-100" alt="signup page">
+                    </div>
+                </div>
+                <div class="col-md-6 py-5">
+                    <div class="logIn-details row d-flex justify-content-center">
+                        <div class="col-md-9">
+                               <h1 class="text-center pb-3 ">Welcome back to the MasCode Community</h1>
+                        <div class="row d-flex justify-content-around">
+                            <div class="col-md-5  logIn-btn">
+                                <div id="g_id_onload"
+                                    data-client_id="664265560275-fsjiplrv3efmsi2et3mu2c7gi3rdguuj.apps.googleusercontent.com"
+                                    data-context="signin"
+                                    data-ux_mode="popup"
+                                    data-callback="loginCallback"
+                                    data-auto_prompt="false">
+                                </div>
+                                <div class="g_id_signin"
+                                    data-type="standard"
+                                    data-shape="pill"
+                                    data-theme="filled_black"
+                                    data-text="signin_with"
+                                    data-size="large"
+                                    data-logo_alignment="left">
+                                </div>
+
+                            </div>
+                            <div class="col-md-5  logIn-btn">
+                                 <div id="g_id_onload"
+                                    data-client_id="664265560275-fsjiplrv3efmsi2et3mu2c7gi3rdguuj.apps.googleusercontent.com"
+                                    data-context="signin"
+                                    data-ux_mode="popup"
+                                    data-callback="loginCallback"
+                                    data-auto_prompt="false">
+                                </div>
+
+                                <div class="g_id_signin"
+                                    data-type="standard"
+                                    data-shape="pill"
+                                    data-theme="filled_black"
+                                    data-text="signin_with"
+                                    data-size="large"
+                                    data-logo_alignment="left">
+                                </div>
+                            </div>
+                        </div>
+
+                       <div class="form-item">
+                            <label for="Email">Email</label>
+                            <input  id="login-email" type="text" class="form-control " placeholder="Enter your email">
+                            <h6 id="email-valid" class="w-50 mx-auto my-2 bg-danger bg-opacity-25 text-white text-center fw-bold d-none   p-2">email in-valid</h6>
+                            <h6 id="email-validRegx" class="w-50 mx-auto my-2 bg-danger bg-opacity-25 text-white text-center fw-bold d-none   p-2">email must be in the format of example@(gmail | yahoo).com</h6>
+                       </div>
+                       <div class="form-item">
+                            <label for="password">password</label>
+                            <input  id="login-pass" type="password" class="form-control" placeholder="Enter your password">
+                            <h6 id="pass-valid" class="w-50 mx-auto my-2 bg-danger bg-opacity-25 text-white text-center fw-bold d-none   p-2">password in-valid</h6>
+                            <h6 id="pass-validRegx" class="w-50 mx-auto my-2 bg-danger bg-opacity-25 text-white text-center fw-bold d-none   p-2">password must start with a capital letter and have at least 8 letters & number & spacial letters</h6>
+
+                       </div>
+                       <div class="form-item d-flex align-items-center">
+                            <input type="checkbox" id="vehicle2" name="vehicle2" value="Bike">
+                            <label for="vehicle2" class="vehicle2"> Remember me</label>
+                       </div>
+                        <h6 id="check-input" class="w-50 mx-auto my-2 bg-danger bg-opacity-25 text-white text-center fw-bold d-none   p-2">The Email or Password is Wrong</h6>
+
+                       <div class="form-item d-flex justify-content-center">
+                        <button id="btn-login" class="btn btn-primary w-25 p-2 m-auto">Log in</button>
+                       </div>
+
+                        <p class="my-5 text-center">No Account yet?  <span><a href="index.html" class=" text-dark ">SIGN UP</a></span></p> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode@4.0.0/build/cjs/index.min.js"></script>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

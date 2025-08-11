@@ -1,0 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Zen Kaku Gothic Antique", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+}
+.signUp,
+.logIn{
+    height: 100vh;
+}
+
+.signUp-details h1,
+.logIn-details h1{
+    font-size: 31.25px;
+    font-weight: 700;
+    line-height: 37.5px;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+    color: #242424;
+    
+}
+
+.signUp-btn1,
+.logIn-btn1{
+    border-radius: 48px;
+    border: 1px solid rgba(238, 238, 238, 1);
+    padding: 10px;
+    background-color: rgba(238, 238, 238, 1);
+    margin: 35px 0;
+}
+
+.signUp-btn,
+.logIn-btn{
+     margin: 35px 0;
+}
+.btn-primary{
+     border-radius: 48px;
+    padding: 10px;
+    background-color: rgba(123, 118, 241, 1);
+    text-transform: uppercase;
+}
+.signUp-details .signUp-btn1 button,
+.logIn-details .logIn-btn1 button{
+    font-size: 12.8px;
+    font-weight: 400;
+    line-height: 22.53px;
+    letter-spacing: -0.2px;
+    text-align: center;
+
+    border: none;
+    
+}
+
+.signUp-details .form-item label,
+.logIn-details .form-item label{
+    font-size: 15.8px;
+    font-weight: 500;
+    line-height: 22.53px;
+    letter-spacing: 0;
+    color: rgba(117, 117, 117, 1);
+    padding: 5px 0;
+}
+.signUp-details .form-item input,
+.logIn-details .form-item input{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28.16px;
+    letter-spacing: 0;
+    color: rgba(33, 33, 33, 1);
+    border: none;
+    border-bottom: 1px solid rgba(189, 189, 189, 1);
+    margin: 20px 0;
+}
+
+
+.signUp-details .form-item .vehicle1,
+.logIn-details .form-item .vehicle2{
+    font-weight: 400;
+    font-size: 13.24px;
+    line-height: 22.53px;
+    margin-left: 10px;
+}
+
+
+.signUp-details p,
+.logIn-details p{
+    font-size: 12.8px;
+    line-height: 100%;
+    font-weight: 500;
+    
+}
+.signUp-details p span,
+.logIn-details p span{
+  
+    font-weight: 700;
+    color: #242424;
+}
+.signUp-details p span a,
+.logIn-details p span a{
+  color: #242424;
+    text-decoration: underline;
+    font-style: solid;
+}
+
+
+.nav{
+    z-index: 9999999999999999999999;
+}
+
+ .main{
+    width: 0px;
+    overflow: hidden;
+
+ }
+ .icon{
+    z-index: 999999999999999999999999999;
+ }
+ .card{
+    position: relative;
+    overflow: hidden;
+ }
+.card-body{
+    padding-top: 20px;
+    position: absolute;
+
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    background-color: rgba(146, 148, 148, 0.5);
+    color: #000;
+    transition: top 1s;
+
+}
+.card:hover .card-body { 
+    top: 0; 
+}
+
+
+
+.contact h4{
+    font-size: 30px;
+    line-height: 29px;
+    
+}
+.contact label{
+    font-size: 20px;
+    line-height: 29px;
+}
+.contact input{
+    /* border-bottom:  1px solid #192D2F80; */
+    border: none;
+    border-bottom: 1px solid #192D2F80;
+    margin-bottom: 40px;
+}
+.contact input:focus{
+    outline:none;
+    
+}
+.contact button{
+    color: #192D2F;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.img-footer{
+    width: 257px;
+    height: 88px;
+}
+
+.item-footer p{
+    font-size: 20px;
+    line-height:30px ;
+    margin-left:15px;
+}
+.item-footer span{
+    /* font-size:16px ; */
+    line-height: 30px;
+    display: block;
+}
+
+
+
+.text-color{
+    color: #B59F65;
+}
+.text-bg-color{
+    background-color: #B59F65;
+}
+.fixed-btn button{
+    border-radius: 50%;
+    border: none;
+    padding: 7px;
+    background-color: #B59F65;
+    color: #192D2F;
+}
+
+.fixed-btn a{
+    text-decoration: none;
+    color: #192D2F;
+}
+.bg-color{
+    background-color: #192D2F;
+}
