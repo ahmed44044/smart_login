@@ -22,6 +22,7 @@ $('#openBtn').click(function(){
 
 let datas=[];
 let imgPath ="https://image.tmdb.org/t/p/w500/";
+let rowData =document.getElementById('rowData')
 
 
 async function getMovies(media_type) {
@@ -29,7 +30,7 @@ async function getMovies(media_type) {
   const data = await response.json()
   datas=data.results;
   console.log(data)
-  display()
+  display(datas)
   
 }
 getMovies('all')
@@ -40,40 +41,51 @@ $('.nav-link').click(function(e){
   console.log(id)
   getMovies(id)
 })
-function display(){
+function display(list){
   let cartonna =``;
-  for(let i=0; i<datas.length;i++) {
-    if(!datas[i].title){
-      datas[i].title = datas[i].name;
+  for(let i=0; i<list.length;i++) {
+    if(!list[i].title){
+      list[i].title = list[i].name;
       // console.log(title)
     }
-    if(!datas[i].poster_path){
-      datas[i].poster_path = datas[i].profile_path;
+    if(!list[i].poster_path){
+      list[i].poster_path = list[i].profile_path;
     }
-    if(!datas[i].vote_average && !datas[i].vote_count){
-      datas[i].vote_average = '';
-      datas[i].vote_count = '';
+    if(!list[i].vote_average && !list[i].vote_count){
+      list[i].vote_average = '';
+      list[i].vote_count = '';
       
 
     }
 
     cartonna += `<div class="col-md-4 ">
     <div class="card">
-        <img src="https://image.tmdb.org/t/p/w500/${datas[i].poster_path}"
+        <img src="https://image.tmdb.org/t/p/w500/${list[i].poster_path}"
             class="card-img-top" alt="...">
         <div class="card-body ">
-          <h5 class="card-title text-center text-uppercase">${datas[i].title}</h5>
-          <p class="card-text overflow-hidden fs-4 pt-3">${datas[i].overview}</p>
+          <h5 class="card-title text-center text-uppercase">${list[i].title}</h5>
+          <p class="card-text overflow-hidden fs-4 pt-3">${list[i].overview}</p>
           <div class="d-flex justify-content-between">
-            <p id="vote" class="fs-4 text-success">${datas[i].vote_average} <span class=" text-warning vote fs-6">voteAvrg</span></p>
-            <p class="fs-4  text-primary">${datas[i].vote_count} <span class=" text-warning fs-6">voteCount</span> </p>
+            <p id="vote" class="fs-4 text-success">${list[i].vote_average} <span class=" text-warning vote fs-6">voteAvrg</span></p>
+            <p class="fs-4  text-primary">${list[i].vote_count} <span class=" text-warning fs-6">voteCount</span> </p>
 
           </div>
         </div>
     </div>
     </div>`;
     }
-    document.getElementById('rowData').innerHTML = cartonna;
+    rowData.innerHTML = cartonna;
 
 }
 
+
+function searchName(searchTerm){
+    let searchResult =[];
+
+    for(var i=0; i<datas.length;i++){
+        if(datas[i].title.toLowerCase().includes(searchTerm.toLowerCase()) == true){
+            searchResult.push(datas[i]);
+        }
+    }
+    display(searchResult)
+}

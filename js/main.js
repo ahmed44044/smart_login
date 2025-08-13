@@ -45,7 +45,7 @@ function loginCallback(response)
 
                     name :data.name,
                     email :data.email,
-                    password:12345,
+                    password:"Ahmed123",
                     }
 
                     datas.push(personeUser)

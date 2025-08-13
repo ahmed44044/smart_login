@@ -3,6 +3,13 @@ let name;
 let email;
 let datas=[];
 let curentIndex=0;
+
+
+if(localStorage.getItem('users').length != null){
+    datas = JSON.parse(localStorage.getItem('users'));
+    
+
+}
 function registerCallback(response){
     console.log(response);
       data=jwtDecode(response.credential)
@@ -11,11 +18,20 @@ function registerCallback(response){
 
     name :data.name,
     email :data.email,
-    password:12345,
+    password:"Ahmed123",
     }
 
+    for(let i=0;i<datas.length;i++){
+        if(datas[i].email==personeUser.email){
+            alert("Email is already exist");
+            window.location.href ="login.html";
+            return;
+        }
+          
+    }
     datas.push(personeUser)
     localStorage.setItem('users',JSON.stringify(datas))
+  
     curentIndex =datas.length-1;
     goToHome()
 
@@ -40,11 +56,6 @@ let vehicle1= document.getElementById('vehicle1')
 
 
 
-if(localStorage.getItem('users').length != null){
-    datas = JSON.parse(localStorage.getItem('users'));
-    
-
-}
 function signUp() {
     if(validationName() == true && validationEmail() == true &&validationPassword() ==true && vehicle1.checked == true) {
     let person ={
